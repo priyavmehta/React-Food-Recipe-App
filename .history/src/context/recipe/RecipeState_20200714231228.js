@@ -12,7 +12,7 @@ const RecipeState = (props) => {
         alert : "",
         search_recipes : [],
         recipe : {},
-        show_search : true
+        show_search = true
     };
 
     const [state, dispatch] = useReducer(recipeReducer, initialState);

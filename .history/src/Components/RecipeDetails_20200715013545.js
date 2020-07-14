@@ -22,8 +22,7 @@ const RecipeDetails = () => {
                     <p><a href = {shareAs} className = "btn btn-danger" style = {{color : 'white'}}>Click here for some more Details</a></p>
                 </div>
             </div>
-            <div style = {{marginBottom : '10px'}}>
-                <p style = {{color : 'black', fontSize : '20px', fontWeight : 'bold'}}>Ingrdient List</p>
+            <div>
                 <ul className = "list-group">
                 {
                     ingredients !== [] && (

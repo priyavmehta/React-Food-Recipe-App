@@ -8,7 +8,7 @@ const Navbar = ({icon, title}) => {
     const [query, setQuery] = useState("")
 
     const RecipeContext = useContext(recipeContext)
-    const {getData, show_search} = RecipeContext
+    const {getData} = RecipeContext
 
     const changeQuery = (event) => setQuery(event.target.value)
 
@@ -19,7 +19,7 @@ const Navbar = ({icon, title}) => {
     }
 
     return (
-        <nav className="navbar navbar-expand-md navbar-light bg-primary fixed-top">
+        <nav className="navbar navbar-expand-md navbar-light bg-primary fixed">
             <a href = "#" className="navbar-brand" style = {{ color : "white", marginRight :100 }}><i className="fas fa-utensils" style = {{ marginRight : 15}}></i>Food App</a>
             <button type="button" className="navbar-toggler bg-light" data-toggle="collapse" data-target="#nav">
                 <span className="navbar-toggler-icon"></span>
@@ -39,12 +39,10 @@ const Navbar = ({icon, title}) => {
                         <Link className="nav-link text-light font-weight-bold px-3" to = "/contact">CONTACT</Link>
                     </li>
                 </ul>
-                
-                    <form className="form-inline" onSubmit = {onSubmitQuery}>
-                        <input className="form-control mr-sm-2" type="search" placeholder="Search food item" aria-label="Search" autoComplete = "off" onChange = {changeQuery} value = {query} />
-                        <button className="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
-                    </form>
-                
+                <form className="form-inline" onSubmit = {onSubmitQuery}>
+                    <input className="form-control mr-sm-2" type="search" placeholder="Search food item" aria-label="Search" autoComplete = "off" onChange = {changeQuery} value = {query} />
+                    <button className="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+                </form>
             </div> 
         </nav>
     )
